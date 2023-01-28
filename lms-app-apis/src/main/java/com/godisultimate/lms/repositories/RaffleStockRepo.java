@@ -28,4 +28,9 @@ public interface RaffleStockRepo extends JpaRepository<RaffleStock, Long> {
 	
 	@Query(value="select rg.group_id as groupId, rg.group_name as groupName from raffle_stock rs inner join raffle_group rg on rs.grp_id = rg.group_id where rs.draw_date = date(:drawDate) && rs.raffle_id = :raffleId && rs.draw = :draw && rs.rfl_str_from <= :rflStrFrom AND rs.rfl_end_to >= :rflEndTo", nativeQuery = true)
 	public List<Map<String, Object>> geGroupByRflIdDrawDrawDateAndRange(@Param("raffleId") long raffleId, int draw, String drawDate, long rflStrFrom, long rflEndTo);
+
+	@Query(value="SELECT * FROM raffle_stock RS"
+			+"Where RS.user_id=:userId AND RS.rfl_str_from <= :rflStrFrom AND RS.rfl_end_to >= :rflEndTo AND RS.draw_date = date(:drawDate) AND RS.grp_id= :grpId ", nativeQuery = true)
+	public Optional<RaffleStock> getStkDtlsByUsrIdFrmToRng(@Param("userId") long userId, @Param("rflStrFrom") long rflStrFrom, @Param("rflEndTo") long rflEndTo, @Param("drawDate") String drawDate, @Param("grpId") long grpId);
+	
 }

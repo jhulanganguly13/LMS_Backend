@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.ui.ModelMap;
 
+import com.godisultimate.lms.model.AdvanceReturn;
 import com.godisultimate.lms.model.Dispatch;
 import com.godisultimate.lms.model.Group;
 import com.godisultimate.lms.model.Purchase;
@@ -54,4 +55,11 @@ public class LmsAppApisApplication {
 	Dispatch dispatch() {
 		return new Dispatch();
 	}
+	
+	@Bean
+	AdvanceReturn advanceReturn() {
+		return new AdvanceReturn();
+	}
+
+	
 }

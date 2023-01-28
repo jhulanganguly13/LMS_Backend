@@ -43,5 +43,7 @@ public final class ApplicationURL {
 	public static final String geGroupByRflIdDrawDrawDateAndRange = "geGroupByRflIdDrawDrawDateAndRange";
 	public static final String addNewDispatch = "addNewDispatch";
 	public static final String getMaxDispatchId = "getMaxDispatchId";
+	public static final String addNewAdvReturn = "addNewAdvReturn";
+	public static final String getMaxAdvReturnId = "getMaxAdvReturnId";
 	
 }

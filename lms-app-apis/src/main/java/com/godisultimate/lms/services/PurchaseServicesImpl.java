@@ -80,8 +80,7 @@ public class PurchaseServicesImpl implements PurchaseServices{
 		if(purchase==null||purchase.getPrchId()<=0) {
 			throw new ApplicationExceptions(ApplicationExceptionMsge.purchase_invalid_parameter); 
 		}
-		else {
-			
+		else {		
 			
 			//List<PurchaseDetails> purchaseDetailsLst=purchaseDtos.getPrchDtlsLst();
 			purchaseDtos.getPrchDtlsLst().forEach( e->{
@@ -115,12 +114,7 @@ public class PurchaseServicesImpl implements PurchaseServices{
 	 * purchaseDtos.setPrchDto(purchaseRepo.getPurchaseByPrchId(0, null));
 	 * purchaseDtos.setPrchDtlsLst(null); }
 	 */
-	
-	/**
-	 * @author Anupam Das
-	 * @param prchId
-	 * @throws ApplicationExceptions
-	 */
+
 	public CustomResponse getPurchaseByPrchId(
 			long prchId) throws ApplicationExceptions {
 		Meta meta = null;
@@ -173,11 +167,6 @@ public class PurchaseServicesImpl implements PurchaseServices{
 		return new CustomResponse(meta, hashMap1);
 	}
 
-	/**
-	 * @author Anupam Das
-	 * @param prchDt
-	 * @throws ApplicationExceptions
-	 */
 	public CustomResponse getPurchaseListByCurrentDate(
 			String prchDt) throws ApplicationExceptions {
 		Meta meta = null;

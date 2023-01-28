@@ -32,14 +32,8 @@ public class PurchaseController {
 	@Autowired
 	private PurchaseServicesImpl purchaseService;
 	
-Logger logger = LoggerFactory.getLogger(PurchaseController.class);
-	
-	/**
-	 * @author Anupam Das
-	 * @throws Exception
-	 * @throws ApplicationExceptions
-	 * @used to save saveNewPurchase
-	 **/
+	Logger logger = LoggerFactory.getLogger(PurchaseController.class);
+
 	@LogExecutionTime
 	@RequestMapping(method = RequestMethod.POST, value = ApplicationURL.addNewPurchase)
 	public CustomResponse saveNewPurchase(

@@ -16,5 +16,6 @@ public class ApplicationExceptionMsge {
 	public static final String user_already_exist = "user_already_exist";
 	public static final String purchase_date_invalid_parameter = "purchase_date_invalid_parameter";
 	public static final String dispatch_invalid_parameter = "dispatch_invalid_parameter";
+	public static final String advance_return_invalid_parameter = "advance_return_invalid_parameter";
 	
 }

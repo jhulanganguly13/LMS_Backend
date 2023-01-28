@@ -66,5 +66,8 @@ public class ApplicationConstant {
 	public static final String dsph_sequence = "dsph_sequence";
 	public static final String dsph_dtls_sequence = "dsph_dtls_sequence";
 	public static final String user_role_sequence = "user_role_sequence";
+	public static final String adv_return_sequence = "adv_return_sequence";
+	public static final String adv_return_dtls_sequence = "adv_return_dtls_sequence";
+	
 
 }
